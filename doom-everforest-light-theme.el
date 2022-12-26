@@ -49,8 +49,8 @@ Defaults to \"material\""
 ;; https://github.com/sainnhe/everforest/blob/master/autoload/everforest.vim
 (cond
  ((equal doom-everforest-light-background "hard")
-  (setq efl/bg           "#fff9e8"       ;; bg0
-        efl/bg-alt       "#f7f4e0"       ;; bg1
+  (setq efl/bg           "#fffbef"       ;; bg0
+        efl/bg-alt       "#f2efdf"       ;; bg1
         efl/base0        "#f0eed9"       ;; bg2
         efl/base1        "#e9e8d2"       ;; bg3
         efl/base2        "#e1ddcb"       ;; bg4
@@ -62,7 +62,7 @@ Defaults to \"material\""
         efl/base8        "#a6b0a0"))     ;; grey0
  ((equal doom-everforest-light-background "medium")
   (setq efl/bg           "#fdf6e3"       ;; bg0
-        efl/bg-alt       "#f3efda"       ;; bg1
+        efl/bg-alt       "#efebd4"       ;; bg1
         efl/base0        "#edead5"       ;; bg2
         efl/base1        "#e4e1cd"       ;; bg3
         efl/base2        "#dfdbc8"       ;; bg4
@@ -73,8 +73,8 @@ Defaults to \"material\""
         efl/base7        "#829181"       ;; grey2
         efl/base8        "#a6b0a0"))     ;; grey0
  (t
-  (setq efl/bg           "#f8f0dc"       ;; bg0
-        efl/bg-alt       "#efead4"       ;; bg1
+  (setq efl/bg           "#f3ead3"       ;; bg0
+        efl/bg-alt       "#e5dfc5"       ;; bg1
         efl/base0        "#e9e5cf"       ;; bg2
         efl/base1        "#e1ddc9"       ;; bg3
         efl/base2        "#dcd8c4"       ;; bg4
@@ -109,7 +109,7 @@ Defaults to \"material\""
    (green      '("#8da101" "#99bb66" "green"        ))
    (teal       '("#35a77c" "#44b9b1" "brightgreen"  )) ;; aqua
    (yellow     '("#dfa000" "#ECBE7B" "yellow"       ))
-   (blue       '("#7fbbb3" "#51afef" "brightblue"   ))
+   (blue       '("#3a94c5" "#51afef" "brightblue"   ))
    (dark-blue  '("#65a199" "#2257A0" "blue"         )) ;; own
    (magenta    '("#df69ba" "#c678dd" "brightmagenta")) ;; purple
    (violet     '("#df69ba" "#a9a1e1" "magenta"      )) ;; purple

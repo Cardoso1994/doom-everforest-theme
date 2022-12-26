@@ -49,24 +49,24 @@ Defaults to \"material\""
 ;; https://github.com/sainnhe/everforest/blob/master/autoload/everforest.vim
 (cond
  ((equal doom-everforest-background "hard")
-  (setq ef/bg           "#2b3339"       ;; bg0
-        ef/bg-alt       "#323c41"       ;; bg1
+  (setq ef/bg           "#272e33"       ;; bg0
+        ef/bg-alt       "#1e2326"       ;; bg1
         ef/base0        "#3a454a"       ;; bg2
         ef/base1        "#445055"       ;; bg3
         ef/base2        "#4c555b"       ;; bg4
         ef/base3        "#53605c"       ;; bg5
         ef/base4        "#503946"))       ;; bg_visual
  ((equal doom-everforest-background "medium")
-  (setq ef/bg           "#2f383e"       ;; bg0
-        ef/bg-alt       "#374247"       ;; bg1
+  (setq ef/bg           "#2d353b"       ;; bg0
+        ef/bg-alt       "#232a2e"       ;; bg1
         ef/base0        "#404c51"       ;; bg2
         ef/base1        "#4a555b"       ;; bg3
         ef/base2        "#525c62"       ;; bg4
         ef/base3        "#596763"       ;; bg5
         ef/base4        "#573e4c"))     ;; bg_visual
  (t
-  (setq ef/bg           "#323d43"       ;; bg0
-        ef/bg-alt       "#3c474d"       ;; bg1
+  (setq ef/bg           "#333c43"       ;; bg0
+        ef/bg-alt       "#293136"       ;; bg1
         ef/base0        "#465258"       ;; bg2
         ef/base1        "#505a60"       ;; bg3
         ef/base2        "#576268"       ;; bg4
