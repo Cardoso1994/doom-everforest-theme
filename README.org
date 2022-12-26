@@ -1,2 +1,90 @@
-# doom-everforest-theme
-Doom Emacs theme based on Everforest by @sainnhe
+#+title: doom-everforest
+* Introduction
+#+begin_quote
+Everforest is a green based color scheme; it's designed to be warm and soft in
+order to protect developers' eyes.
+#+end_quote
+
+This is a port of [[https://github.com/sainnhe/everforest][Everforest]] to be used in Doom Emacs. As the original,
+it has two palettes: dark and light. Additionally, it has three background
+contrast options: soft, medium and hard. This gives in total  6 possible
+configurations.
+
+* Installation
+Copy the =doom-everforest-theme.el= and
+=doom-everforest-light-theme.el= files into your =$HOME/.doom.d/themes=
+directory. Add the following lines to your =~/.doom.d/config.el=:
+#+begin_src elisp
+;; `gruvbox-material' contrast and palette options
+(setq doom-everforest-background  "medium")  ; or hard (defaults to soft)
+
+;; `gruvbox-material-light' contrast and palette options
+(setq doom-everforest-light-background  "medium") ; or hard (defaults to soft)
+
+;; set `doom-theme'
+(setq doom-theme 'doom-everforest) ; dark variant
+(setq doom-theme 'doom-everforest-light) ; light variant
+#+end_src
+
+Additionally, I have this function to automatically change the colorscheme
+depending on the time of the day:
+#+begin_src elisp
+(defun mac/timed-theme (&optional morning-theme night-theme)
+  "Change doom-theme depending on time of the day. Runs every hour."
+  (let* ((morning-theme (or morning-theme 'doom-solarized-light))
+         (night-theme (or night-theme 'doom-solarized-dark))
+         (hour (nth 2 (decode-time (current-time))))
+         (theme (cond ((<= 7 hour 17)   morning-theme)
+                      (t                night-theme))))
+    (unless (equal doom-theme theme)
+      (setq doom-theme theme)
+      (load-theme doom-theme t))
+    ;; run every hour
+    (run-at-time (format "%02d:%02d" (+ hour 1) 0) nil
+                 #'mac/timed-theme morning-theme night-theme)))
+
+(mac/timed-theme 'doom-everforest-light
+                 'doom-everforest)
+#+end_src
+
+* Screenshots
+*All screenshots present the three color palettes with a soft contrast*
+** Dark
+**** Elisp
+[[./img/dark_elisp.png]]
+**** Python
+[[./img/dark_python.png]]
+**** Org-mode
+[[./img/dark_org.png]]
+** Light
+**** Elisp
+[[./img/light_elisp.png]]
+**** Python
+[[./img/light_python.png]]
+**** Org-mode
+[[./img/light_org.png]]
+
+* Your own configuration
+Doom allows for extra configuration, which can be achieved by using the
+=custom-theme-set-faces!= function. This will give you the ability to customize
+this color palette to any way you choose, for example:
+#+begin_src elisp
+(custom-theme-set-faces! '(doom-everforest doom-everforest-light)
+  `(fill-column-indicator :foreground ,(doom-color 'bg-alt)
+                          :background ,(doom-color 'bg-alt))
+  `(font-lock-comment-face :foreground ,(doom-darken (doom-color 'teal) 0.2))
+  `(org-document-info-keyword :foreground ,(doom-darken
+                                            (doom-color 'green) 0.3))
+  `(org-drawer :foreground ,(doom-darken (doom-color 'yellow) 0.25))
+  `(org-link :foreground ,(doom-color 'teal) :underline t)
+  `(show-paren-match :foreground ,(doom-color 'fg)
+                     :background ,(doom-darken (doom-color 'orange) 0.5))
+  `(org-block-begin-line :foreground ,(doom-color 'fg-alt)
+                         :background ,(doom-color 'bg-alt))
+  `(org-level-1 :foreground ,(doom-color 'violet) :weight bold :height 1.6)
+  `(org-level-2 :foreground ,(doom-color 'orange) :weight bold :height 1.4)
+  `(org-level-3 :foreground ,(doom-color 'magenta):weight bold  :height 1.2)
+  `(org-level-4 :foreground ,(doom-color 'teal) :weight bold :height 1.1))
+#+end_src
+
+for more examples, you can always check the documentation ;).
