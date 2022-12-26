@@ -222,6 +222,9 @@ Defaults to \"material\""
    (diredfl-symlink :height doom-everforest-dired-height
                     :foreground magenta)
 
+   ;; ein
+   (ein:basecell-input-area-face :background bg)
+
    ;; eshell
    (+eshell-prompt-git-branch :foreground cyan)
 
@@ -279,6 +282,9 @@ Defaults to \"material\""
 
    ;; org-ref
    (org-ref-ref-face :foreground magenta)
+
+   ;; org-roam
+   (org-roam-title :foreground orange :weight 'semi-bold)
 
    ;; rainbow and parenthesis
    (rainbow-delimiters-depth-1-face :foreground orange)
