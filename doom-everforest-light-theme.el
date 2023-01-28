@@ -246,7 +246,6 @@ Defaults to \"material\""
    (evil-ex-lazy-highlight :foreground fg :background (doom-lighten orange 0.3))
    (evil-snipe-first-match-face :foreground bg :background orange)
 
-
    ;; ivy
    (ivy-current-match :foreground blue :background bg)
    (ivy-minibuffer-match-face-2 :foreground blue :background bg)
@@ -281,10 +280,10 @@ Defaults to \"material\""
    (org-document-info-keyword :foreground blue)
    (org-document-title :foreground blue)
    (org-block-begin-line :foreground dark-cyan
-                         :background bg-alt)
+                         :background (doom-blend bg teal 0.85))
    (org-block-end-line :foreground dark-cyan
-                         :background bg-alt)
-   (org-block :foreground fg :background bg-alt)
+                         :background (doom-blend bg teal 0.85))
+   (org-block :foreground fg :background (doom-blend bg teal 0.85))
    (org-meta-line :foreground cyan)
    (org-level-1 :foreground magenta :weight 'semi-bold)
    (org-level-2 :foreground cyan :weight 'semi-bold)
