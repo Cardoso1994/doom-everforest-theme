@@ -285,7 +285,7 @@ Defaults to \"material\""
                          :background (doom-blend bg teal 0.85))
    (org-block :foreground fg :background (doom-blend bg teal 0.85))
    (org-meta-line :foreground cyan)
-   (org-level-1 :foreground magenta :weight 'semi-bold :height 1.3)
+   (org-level-1 :foreground magenta :weight 'semi-bold :height 1.4)
    (org-level-2 :foreground cyan :weight 'semi-bold :height 1.2)
    (org-level-3 :foreground green :weight 'semi-bold :height 1.1)
    (org-level-4 :foreground yellow :weight 'semi-bold)
