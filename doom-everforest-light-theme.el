@@ -122,7 +122,7 @@ Defaults to \"material\""
    (selection      dark-blue)
    (builtin        magenta)
    (comments       (if doom-everforest-light-brighter-comments cyan
-                     (doom-blend yellow base8 0.25)))
+                     (doom-blend magenta cyan 0.65)))
    (doc-comments   (doom-darken (if doom-everforest-light-brighter-comments
                                     dark-cyan green) 0.2))
    (constants      magenta)
